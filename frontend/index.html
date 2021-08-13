@@ -20,6 +20,7 @@
 
         <br>
         <br>
+        <img src="https://randomwordgenerator.com/img/picture-generator/53e6d5474957b10ff3d8992cc12c30771037dbf85254794e72287fd19f4f_640.jpg">
 
         <div class="container" id="createForm">
 
@@ -35,7 +36,7 @@
 
                 <div class="mb-3"> 
                     <label for="quantityInput" class="form-label">Quantity</label>
-                    <input type="text" class="form-control" id="quantityInput" aria-describedby="quantity input">
+                    <input type="number" class="form-control" id="quantityInput" aria-describedby="quantity input">
                     <div id="quantityHelp" class="form-text">Please enter the number of this item you want</div>
                 </div>
 
@@ -50,9 +51,9 @@
                     <div id="idHelp" class="form-text">If updating an item, please enter the ID here</div>
                 </div>
 
-                <button type="button" class="btn btn-success btn-lg"> Create New Item </button>
-                <button type="button" class="btn btn-secondary btn-lg"> Update Item </button>
-                <button type="button" class="btn btn-danger btn-lg"> Clear Data </button>
+                <button type="button" class="btn btn-success btn-lg" id="submitBtn"> Create New Item </button>
+                <button type="button" class="btn btn-secondary btn-lg" id="updateBtn"> Update Item </button>
+                <button type="button" class="btn btn-danger btn-lg" id="clearBtn"> Clear Data </button>
 
               </form>
 
@@ -81,16 +82,9 @@
 
             <h3> All data in database </h3>
 
+            <br>
+            <br>
             <div class="container" id="cardList">
-
-                <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Name </h5>
-                      <h5 class="card-text"> Quantity </h5>
-                      <h5 class="card-text"> High Priority </h5>
-                      <h5 class="card-text"> ID </h5>
-                    </div>
-                </div>
 
             </div>
 
