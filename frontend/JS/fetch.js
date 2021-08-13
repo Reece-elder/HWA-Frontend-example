@@ -178,6 +178,42 @@ let deleteData = (id) => {
 
 }
 
+
+// Update Method
+// Using the existing form for create, no need to find new forms
+
+// Creating the fetch method for update
+
+let updateData = (id) => {
+
+    const item = {
+        "name": nameInput.value,
+        "quantity": parseInt(quantityInput.value, 10),
+        "high_priority": true
+    };
+
+    fetch(`http://localhost:8082/update/${id}`, {
+        method: `PUT`, // Using PUT Method
+        headers: {
+            "Content-type":"application/json" 
+        },              // Needed for POST requests
+        body: JSON.stringify(item) // What is being posted 
+    }).then((response) =>{
+        response.json();
+    })
+    .then((data) => {
+        console.log(`Post request succesful`);
+    });
+
+};
+
+// Event Listener for update button
+// Passing in function again because the fetch method requires a paramater
+updateButton.addEventListener('click', function() {
+    updateData(idInput.value);
+})
+
+
 // Event listener for delete button
 // passing in the function because the fetch method requires a paramater
 deleteButton.addEventListener('click', function(){
