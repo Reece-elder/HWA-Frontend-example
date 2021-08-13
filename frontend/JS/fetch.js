@@ -160,6 +160,31 @@ let postData = () => {
 
 };
 
+
+// Delete method
+
+// Finding the delete id form and button
+
+const deleteID = document.querySelector('#deleteInput');
+const deleteButton = document.querySelector('#deleteBtn');
+
+let deleteData = (id) => {
+
+    fetch(`http://localhost:8082/delete/${id}`, {
+        method: `DELETE`, // Using DELETE Method
+    }).then((data) => {
+        console.log(`Delete request succesful`);
+    });
+
+}
+
+// Event listener for delete button
+// passing in the function because the fetch method requires a paramater
+deleteButton.addEventListener('click', function(){
+    deleteData(deleteID.value);
+});
+
+
 // Add an event listener to my button, 
 // to tell it to do this method when it is clicked
 
